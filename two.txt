@@ -1,0 +1,27 @@
+sudo su
+
+lsblk -lsb
+lsblk -fs
+fdisk -l
+
+fdisk /dev/xvda11
+lsblk -f
+partprobe
+
+mkfs.ext4 /dev/xvda127
+lsblk -fs
+
+mkdir /mnt/smt
+mount /dev/xvda127 /mnt/smt
+
+nano f1
+ls
+cat f1
+
+vi /etc/fstab
+
+/dev/xvda /mnt/smt ext4 0 0
+
+umount /mnt/smt
+
+ 
