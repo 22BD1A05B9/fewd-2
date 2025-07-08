@@ -1,0 +1,8 @@
+sudo su
+lsblk -f
+mkdir /mnt/sa
+mount /dev/xvda127 /mnt/sa
+mount /dev/xvda1 /mnt/sa
+lsblk -f
+cd /mnt/sa
+ls
